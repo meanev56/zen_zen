@@ -1,6 +1,7 @@
 import Layout from "./components/pages/Layout";
 import { useState, useEffect } from 'react';
 import { getCurrentDateString } from "./utils";
+import Hero from "./components/pages/Hero";
 
 function App() {
     const [name, setName] = useState('')
@@ -157,6 +158,9 @@ function App() {
       }, [currDateString])
     
 
+     const displays = {
+        0: <Hero handleCreateAccount={handleCreateAccount} name={name} setName={setName} />,
+     }
 
 
 
