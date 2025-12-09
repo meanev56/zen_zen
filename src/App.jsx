@@ -2,6 +2,7 @@ import Layout from "./components/pages/Layout";
 import { useState, useEffect } from 'react';
 import { getCurrentDateString } from "./utils";
 import Hero from "./components/pages/Hero";
+import Dashboard from "./components/pages/Dashboard";
 
 function App() {
     const [name, setName] = useState('')
@@ -160,6 +161,8 @@ function App() {
 
      const displays = {
         0: <Hero handleCreateAccount={handleCreateAccount} name={name} setName={setName} />,
+        1: <Dashboard currTodo={todos?.[currDateString] || 'You have no active todos... Click me to add some!'} currDateString={currDateString} handleAddHabit={handleAddHabit} handleDeleteHabit={handleDeleteHabit} data={data} habits={habits} name={name} day={day} handleChangePage={handleChangePage} />,
+        
      }
 
 
